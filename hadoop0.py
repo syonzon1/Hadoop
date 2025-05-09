@@ -13,7 +13,6 @@ Original file is located at
 !apt-get install openjdk-8-jdk-headless -qq > /dev/null
 
 #create java home variable
-import os
 os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
 os.environ["SPARK_HOME"] = "/content/spark-3.0.0-bin-hadoop3.2"
 
@@ -22,7 +21,7 @@ os.environ["SPARK_HOME"] = "/content/spark-3.0.0-bin-hadoop3.2"
 #download hadoop
 !wget https://downloads.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
 
-#we’ll use the tar command with the -x flag to extract, -z to uncompress,
+#I use the tar command with the -x flag to extract, -z to uncompress,
 #-v for verbose output, and -f to specify that we’re extracting from a file
 !tar -xzvf hadoop-3.4.1.tar.gz
 
